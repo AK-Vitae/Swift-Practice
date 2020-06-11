@@ -1,5 +1,3 @@
-import UIKit
-
 //The Basics
 
 //Constants

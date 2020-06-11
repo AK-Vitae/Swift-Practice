@@ -1,5 +1,3 @@
-import UIKit
-
 //Booleans
 let orangesAreOrange: Bool = true
 let orangesAreOrange2 = true
