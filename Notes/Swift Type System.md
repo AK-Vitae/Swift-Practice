@@ -25,3 +25,16 @@ Function as Types:
 * (Double) -> Void // takes a Double and returns nothing 
 * () -> Array // takes no arguments and returns an Array of Strings 
 * () -> Void // takes no arguments and returns nothing (this is a common one)
+
+
+
+## Protocols
+
+* A protocol is sort of a "stripped-down" struct/class
+  * It has functions and vars, but no implementation or storage
+* Struct or Class can implement a protocol or multiple protocols
+* A protocol can have protocol inheritance
+* "Constrains and gains"
+* You can extend a protocol to have implementation and you can even add default implementation
+* Protocols allow for code to demand certain behavior out of another type
+
