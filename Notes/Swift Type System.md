@@ -35,6 +35,18 @@ Function as Types:
 * Struct or Class can implement a protocol or multiple protocols
 * A protocol can have protocol inheritance
 * "Constrains and gains"
-* You can extend a protocol to have implementation and you can even add default implementation
+* You can extend a protocol to have implementation and you can even add default implementation  
 * Protocols allow for code to demand certain behavior out of another type
+
+
+
+## Enum
+
+* Can only have discrete states (cases)
+* A value type, so it is copied as it is passed around
+* Each discrete state can have its own "associated data"
+* An enum's state is checked with a switch statement
+* A switch must handle all possible cases
+* Can have methods and computed properties, but no stored properties
+* Optional is an enum
 
