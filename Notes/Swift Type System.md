@@ -49,4 +49,3 @@ Function as Types:
 * A switch must handle all possible cases
 * Can have methods and computed properties, but no stored properties
 * Optional is an enum
-
