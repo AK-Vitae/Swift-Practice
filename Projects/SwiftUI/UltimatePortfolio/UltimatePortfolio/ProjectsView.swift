@@ -28,10 +28,9 @@ struct ProjectsView: View {
             List {
                 // Because we use the FetchRequest struct directly rather than as a property wrapper, we need to read its inner value using wrappedValue
                 ForEach(projects.wrappedValue) { project in
-                    Section(header: Text(project.title ?? "")) {
-                        // Relationships in core data need to be type cast as an array
-                        ForEach(project.items?.allObjects as? [Item] ?? []) { item in
-                            Text(item.title ?? "")
+                    Section(header: Text(project.projectTitle)) {
+                        ForEach(project.projectItems) { item in
+                            Text(item.itemTitle)
                         }
                     }
                 }

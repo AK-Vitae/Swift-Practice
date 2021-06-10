@@ -16,6 +16,8 @@
 		03C2D4FC26B5AD2800DFF727 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C2D4FB26B5AD2800DFF727 /* CloudKit.framework */; };
 		03C2D4FE26B5F07B00DFF727 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2D4FD26B5F07B00DFF727 /* HomeView.swift */; };
 		03C2D50026B5F1FF00DFF727 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2D4FF26B5F1FF00DFF727 /* ProjectsView.swift */; };
+		03C2D50226B5FECE00DFF727 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2D50126B5FECE00DFF727 /* Item-CoreDataHelpers.swift */; };
+		03C2D50426B6001100DFF727 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2D50326B6001100DFF727 /* Project-CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		03C2D4FB26B5AD2800DFF727 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		03C2D4FD26B5F07B00DFF727 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		03C2D4FF26B5F1FF00DFF727 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		03C2D50126B5FECE00DFF727 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		03C2D50326B6001100DFF727 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				03C2D4F426B59DFC00DFF727 /* Main.xcdatamodeld */,
 				03C2D4EB26B47EB600DFF727 /* Preview Content */,
 				03C2D4F726B5A18D00DFF727 /* DataController.swift */,
+				03C2D50126B5FECE00DFF727 /* Item-CoreDataHelpers.swift */,
+				03C2D50326B6001100DFF727 /* Project-CoreDataHelpers.swift */,
 			);
 			path = UltimatePortfolio;
 			sourceTree = "<group>";
@@ -166,10 +172,12 @@
 			files = (
 				03C2D50026B5F1FF00DFF727 /* ProjectsView.swift in Sources */,
 				03C2D4F626B59DFC00DFF727 /* Main.xcdatamodeld in Sources */,
+				03C2D50426B6001100DFF727 /* Project-CoreDataHelpers.swift in Sources */,
 				03C2D4F826B5A18D00DFF727 /* DataController.swift in Sources */,
 				03C2D4E826B47EB500DFF727 /* ContentView.swift in Sources */,
 				03C2D4FE26B5F07B00DFF727 /* HomeView.swift in Sources */,
 				03C2D4E626B47EB500DFF727 /* UltimatePortfolioApp.swift in Sources */,
+				03C2D50226B5FECE00DFF727 /* Item-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
