@@ -29,6 +29,7 @@ var burns = """
 // numeric values //
 // Int //
 var numOne: Int = 3
+var bigInt = 8_000_000
 // Double or Float //
 var numTwo: Double = 5.1234567 // Doubles are more precise
 var numeThree: Float = -186.1234567 // Removes accuracy from the back of the number for the front
