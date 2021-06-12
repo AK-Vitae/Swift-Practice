@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ProjectsView: View {
     // Properties have to independent and they cannot use each other
+    static let openTag: String? = "Open"
+    static let closedTag: String? = "Closed"
+    
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
     
