@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037519A926B8E73E001B776F /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037519A826B8E73E001B776F /* EditItemView.swift */; };
+		037519AB26B8EAFE001B776F /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037519AA26B8EAFE001B776F /* ItemRowView.swift */; };
 		03C2D4E626B47EB500DFF727 /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2D4E526B47EB500DFF727 /* UltimatePortfolioApp.swift */; };
 		03C2D4E826B47EB500DFF727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2D4E726B47EB500DFF727 /* ContentView.swift */; };
 		03C2D4EA26B47EB600DFF727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C2D4E926B47EB600DFF727 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		037519A826B8E73E001B776F /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		037519AA26B8EAFE001B776F /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		03C2D4E226B47EB500DFF727 /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C2D4E526B47EB500DFF727 /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		03C2D4E726B47EB500DFF727 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,7 +77,9 @@
 				03C2D4E526B47EB500DFF727 /* UltimatePortfolioApp.swift */,
 				03C2D4FD26B5F07B00DFF727 /* HomeView.swift */,
 				03C2D4FF26B5F1FF00DFF727 /* ProjectsView.swift */,
+				037519AA26B8EAFE001B776F /* ItemRowView.swift */,
 				03C2D4E726B47EB500DFF727 /* ContentView.swift */,
+				037519A826B8E73E001B776F /* EditItemView.swift */,
 				03C2D4E926B47EB600DFF727 /* Assets.xcassets */,
 				03C2D4EE26B47EB600DFF727 /* Info.plist */,
 				03C2D4F426B59DFC00DFF727 /* Main.xcdatamodeld */,
@@ -174,10 +180,12 @@
 				03C2D4F626B59DFC00DFF727 /* Main.xcdatamodeld in Sources */,
 				03C2D50426B6001100DFF727 /* Project-CoreDataHelpers.swift in Sources */,
 				03C2D4F826B5A18D00DFF727 /* DataController.swift in Sources */,
+				037519AB26B8EAFE001B776F /* ItemRowView.swift in Sources */,
 				03C2D4E826B47EB500DFF727 /* ContentView.swift in Sources */,
 				03C2D4FE26B5F07B00DFF727 /* HomeView.swift in Sources */,
 				03C2D4E626B47EB500DFF727 /* UltimatePortfolioApp.swift in Sources */,
 				03C2D50226B5FECE00DFF727 /* Item-CoreDataHelpers.swift in Sources */,
+				037519A926B8E73E001B776F /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
