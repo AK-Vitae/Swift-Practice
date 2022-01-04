@@ -13,6 +13,9 @@ class ViewController: UITableViewController { // Inherits functionality from UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Storm Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         let fm = FileManager.default // Lets us work with the filesystem
         let path = Bundle.main.resourcePath! // A constant path
         let items = try! fm.contentsOfDirectory(atPath: path) // Gets contents from directory at path
