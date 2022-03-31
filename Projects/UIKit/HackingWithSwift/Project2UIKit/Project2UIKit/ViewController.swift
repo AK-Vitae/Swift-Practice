@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionsAsked = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +31,10 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
-        askQuestion()
+        askQuestion(action: nil)
     }
     
-    func askQuestion() {
+    func askQuestion(action: UIAlertAction!) {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
@@ -41,9 +42,40 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased())" + " - Score: " + "\(score)"
+        
+        questionsAsked += 1
     }
-
-
+    
+    @IBAction func buttontapped(_ sender: UIButton) {
+        var title: String
+        var message: String
+        
+        if sender.tag == correctAnswer {
+            title = "Correct"
+            score += 1
+            message = "Your score is \(score)"
+        } else {
+            title = "Wrong"
+            score -= 1
+            message = "That’s the flag of \(countries[correctAnswer].uppercased()). \nYour score is \(score)"
+        }
+        
+        if questionsAsked == 10 {
+            let ac = UIAlertController (title: "Game Over", message: "Your final score is \(score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Start New Game", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+            score = 0
+            questionsAsked = 0
+        } else {
+            let ac = UIAlertController (title: title, message: message, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion)) // No () after askQuestion because we want to run that method not the result of that method being run
+            present(ac, animated: true)
+        }
+        
+        
+        
+    }
+    
 }
 
