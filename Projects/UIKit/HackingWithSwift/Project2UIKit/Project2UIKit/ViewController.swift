@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
         askQuestion(action: nil)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
     }
     
     func askQuestion(action: UIAlertAction!) {
@@ -72,9 +74,12 @@ class ViewController: UIViewController {
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion)) // No () after askQuestion because we want to run that method not the result of that method being run
             present(ac, animated: true)
         }
-        
-        
-        
+    }
+    
+    @objc func showScore() {
+        let ac = UIAlertController(title: "Score", message: "Your current score is: \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(ac, animated: true)
     }
     
 }
