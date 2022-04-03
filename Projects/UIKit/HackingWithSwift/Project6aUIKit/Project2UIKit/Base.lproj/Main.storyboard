@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JYX-Vp-pDt">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-QO-49e">
+                                <rect key="frame" x="95" y="124" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xgO-QO-49e" secondAttribute="height" multiplier="2:1" id="ZFv-V1-Rpk"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttontapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8CR-NW-18r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZID-Wa-b2X">
+                                <rect key="frame" x="95" y="254" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZID-Wa-b2X" secondAttribute="height" multiplier="2:1" id="1Va-79-1CQ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttontapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbD-nj-pVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp0-cH-iyv">
+                                <rect key="frame" x="95" y="384" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qp0-cH-iyv" secondAttribute="height" multiplier="2:1" id="ra4-NX-UNh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttontapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58H-VT-fFg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZID-Wa-b2X" firstAttribute="top" secondItem="xgO-QO-49e" secondAttribute="bottom" constant="30" id="3Bl-gq-lNn"/>
+                            <constraint firstItem="Qp0-cH-iyv" firstAttribute="top" secondItem="ZID-Wa-b2X" secondAttribute="bottom" constant="30" id="5Ka-lr-Kdy"/>
+                            <constraint firstItem="xgO-QO-49e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="B7D-uJ-7d6"/>
+                            <constraint firstItem="ZID-Wa-b2X" firstAttribute="centerX" secondItem="xgO-QO-49e" secondAttribute="centerX" id="CIz-ec-dII"/>
+                            <constraint firstItem="Qp0-cH-iyv" firstAttribute="height" secondItem="ZID-Wa-b2X" secondAttribute="height" id="UBr-bM-KhB"/>
+                            <constraint firstItem="Qp0-cH-iyv" firstAttribute="centerX" secondItem="ZID-Wa-b2X" secondAttribute="centerX" id="geH-Q9-ruc"/>
+                            <constraint firstItem="ZID-Wa-b2X" firstAttribute="height" secondItem="xgO-QO-49e" secondAttribute="height" id="kDj-rA-taJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qp0-cH-iyv" secondAttribute="bottom" constant="20" id="o7O-2d-iNk"/>
+                            <constraint firstItem="xgO-QO-49e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vYC-c0-EOe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ov-WJ-soR"/>
+                    <connections>
+                        <outlet property="button1" destination="xgO-QO-49e" id="Kck-LP-2ff"/>
+                        <outlet property="button2" destination="ZID-Wa-b2X" id="UhU-DX-ccZ"/>
+                        <outlet property="button3" destination="Qp0-cH-iyv" id="ZnN-ZJ-lfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="105.80357142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pfl-dT-h7w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JYX-Vp-pDt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3jR-qm-cYu">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kSJ-jc-woc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2d-WK-WJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
