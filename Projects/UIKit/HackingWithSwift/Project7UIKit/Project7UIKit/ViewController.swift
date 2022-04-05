@@ -12,6 +12,10 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
+        
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterPetitions))
 
         let urlString: String
 
@@ -33,6 +37,12 @@ class ViewController: UITableViewController {
         showError()
     }
     
+    @objc func showCredits() {
+        let ac = UIAlertController(title: "Credits", message: "Data comes from the We The People API of the White House", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+
     func parse(json: Data) {
         let decoder = JSONDecoder()
 
