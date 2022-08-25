@@ -16,15 +16,30 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupNavigationBar()
+        
+        viewModel.getPetitions(navigationControllerTag: navigationController?.tabBarItem.tag)
+        
         viewModel.$allPetitions
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
+            .sink { [weak self] allPetitions in
+                self?.petitions = allPetitions
                 self?.tableView.reloadData()
             }
             .store(in: &anyCancellable)
         
     }
+    
+    func setupNavigationBar() {
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(askFilter))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
+    }
+    
+    @objc func showCredits() {
+           let ac = UIAlertController(title: "Credits", message: "Petitions from WE the PEOPLE at petitions.whitehouse.gov", preferredStyle: .alert)
+           ac.addAction(UIAlertAction(title: "OK", style: .default))
+           present(ac, animated: true)
+       }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.allPetitions.count
@@ -37,6 +52,13 @@ class ViewController: UITableViewController {
         cell.textLabel?.text = petition.title
         cell.detailTextLabel?.text = petition.body
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.detailItem = viewModel.allPetitions[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

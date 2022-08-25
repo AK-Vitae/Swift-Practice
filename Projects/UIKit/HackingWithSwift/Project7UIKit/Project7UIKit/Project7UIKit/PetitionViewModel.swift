@@ -5,7 +5,7 @@
 //  Created by Ramadugu, Akshith on 8/21/22.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 class PetitionViewModel {
@@ -14,11 +14,11 @@ class PetitionViewModel {
     var petitionSubscription: AnyCancellable?
     
     init() {
-        getPetitions()
+        //getPetitions()
     }
     
-    func getPetitions() {
-        guard let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") else { return }
+    func getPetitions(navigationControllerTag: Int?) {
+        guard let url = getURL(navigationControllerTag: navigationControllerTag) else { return }
         
         petitionSubscription = NetworkManager.download(url: url)
             .decode(type: Petitions.self, decoder: JSONDecoder())
@@ -33,5 +33,17 @@ class PetitionViewModel {
                 self?.allPetitions = returnedPetitions.results
                 self?.petitionSubscription?.cancel()
             })
+    }
+    
+    func getURL(navigationControllerTag: Int?) -> URL? {
+        var url: URL?
+        
+        if navigationControllerTag == 0 {
+            url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json")
+        } else {
+            url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json")
+        }
+        
+        return url
     }
 }
