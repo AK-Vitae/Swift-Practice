@@ -12,7 +12,7 @@ class ViewController: UITableViewController {
     
     var petitions = [Petition]()
     let viewModel = PetitionViewModel()
-    var anyCancellable = Set<AnyCancellable>()
+    var anyCancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,21 +26,25 @@ class ViewController: UITableViewController {
                 self?.petitions = allPetitions
                 self?.tableView.reloadData()
             }
-            .store(in: &anyCancellable)
+            .store(in: &anyCancellables)
         
     }
     
     func setupNavigationBar() {
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(askFilter))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(askFilter))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
     }
     
     @objc func showCredits() {
-           let ac = UIAlertController(title: "Credits", message: "Petitions from WE the PEOPLE at petitions.whitehouse.gov", preferredStyle: .alert)
-           ac.addAction(UIAlertAction(title: "OK", style: .default))
-           present(ac, animated: true)
-       }
+        let ac = UIAlertController(title: "Credits", message: "Petitions from WE the PEOPLE at petitions.whitehouse.gov", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    @objc func askFilter() {
 
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.allPetitions.count
     }
