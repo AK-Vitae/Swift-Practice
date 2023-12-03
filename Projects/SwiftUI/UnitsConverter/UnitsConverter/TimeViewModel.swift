@@ -1,20 +1,20 @@
 //
-//  TemperatureViewModel.swift
+//  TimeViewModel.swift
 //  UnitsConverter
 //
-//  Created by Akshith Ramadugu on 12/1/23.
+//  Created by Akshith Ramadugu on 12/2/23.
 //
 
 import Foundation
 
-class TemperatureViewModel: ObservableObject {
+class TimeViewModel: ObservableObject {
     @Published var inputValue: Double = 0 {
         didSet { convert() }
     }
-    @Published var selectedInputUnit: TemperatureType = .celsius {
+    @Published var selectedInputUnit: TimeType = .minutes {
         didSet { convert() }
     }
-    @Published var selectedOutputUnit: TemperatureType = .fahrenheit {
+    @Published var selectedOutputUnit: TimeType = .seconds {
         didSet { convert() }
     }
     @Published var outputValue: Double = 0
@@ -32,7 +32,7 @@ class TemperatureViewModel: ObservableObject {
     }
 
     func convert() {
-        outputValue = UnitConverter.convertTemperature(value: inputValue, from: selectedInputUnit, to: selectedOutputUnit)
+        outputValue = UnitConverter.convertTime(value: inputValue, from: selectedInputUnit, to: selectedOutputUnit)
     }
 }
 

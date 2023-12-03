@@ -11,7 +11,7 @@ import SwiftUI
 struct UnitsConverterApp: App {
     var body: some Scene {
         WindowGroup {
-            TemperatureConversionView()
+            MainConversionView()
         }
     }
 }
