@@ -78,16 +78,11 @@ extension ContentView {
                 Button {
                     flagTapped(number)
                 } label: {
-                    Image(countries[number])
-                        .clipShape(Capsule())
-                        .shadow(radius: 5)
+                    FlagImage(country: countries[number])
                 }
             }
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 20)
-        .background(.regularMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .blurredWhiteRectangle()
     }
     
     func flagTapped(_ number: Int) {
@@ -119,6 +114,32 @@ extension ContentView {
         correctAnswer = Int.random(in: 0...2)
         score = 0
         questionNumber = 0
+    }
+}
+
+struct FlagImage: View {
+    var country: String
+    
+    var body: some View {
+        Image(country)
+            .clipShape(Capsule())
+            .shadow(radius: 5)
+    }
+}
+
+extension View {
+    func blurredWhiteRectangle() -> some View {
+        modifier(BlurredWhiteRectangle())
+    }
+}
+
+struct BlurredWhiteRectangle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 20)
+            .background(.regularMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
