@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var scoreTitle = ""
     @State private var score = 0
     @State private var questionNumber = 0
+    @State private var animationAmounts = [Int: Double](uniqueKeysWithValues: (0..<3).map { ($0, 0.0) })
     
     var body: some View {
         ZStack {
@@ -76,10 +77,19 @@ extension ContentView {
             
             ForEach(0..<3) { number in
                 Button {
-                    flagTapped(number)
+                    withAnimation(.spring(duration: 1, bounce: 0.5)) {
+                        let currentAmount = animationAmounts[number] ?? 0
+                        animationAmounts[number] = currentAmount + 360
+                        flagTapped(number)
+                    }
                 } label: {
                     FlagImage(country: countries[number])
                 }
+
+                .rotation3DEffect(
+                    .degrees(animationAmounts[number] ?? 0.0),
+                    axis: (x: 0, y: 1, z: 0)
+                )
             }
         }
         .blurredWhiteRectangle()
